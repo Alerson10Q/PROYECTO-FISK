@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #0066cc;
+    --primary-dark: #004d99;
+    --background-color: #f4f4f4;
+    --white: #ffffff;
+    --text-color: #333;
+    --text-secondary: #666;
+}
+
+.admin-dashboard {
+    background-color: var(--background-color);
+    padding: 20px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.admin-dashboard h1 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    color: var(--text-color);
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-dark);
+    border-radius: 4px;
+}
+
+.dashboard-content {
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
+}
+
+.dashboard-content h2 {
+    color: var(--text-color);
+    margin-top: 0;
+}
+
+.dashboard-content p {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+button {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}

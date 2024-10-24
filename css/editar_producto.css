@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-dashboard {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+#accesorios_fields,
+#mini_ferreteria_fields,
+#pinturas_fields {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    display: none;
+}
+
+#accesorios_fields label,
+#mini_ferreteria_fields label,
+#pinturas_fields label {
+    font-size: 13px;
+}
+
+#accesorios_fields input,
+#mini_ferreteria_fields input,
+#pinturas_fields input {
+    font-size: 13px;
+}
+
+#accesorios_fields input[type="text"],
+#mini_ferreteria_fields input[type="text"],
+#pinturas_fields input[type="text"] {
+    width: 48%;
+    display: inline-block;
+    margin-right: 4%;
+}
+
+#accesorios_fields input[type="text"]:last-of-type,
+#mini_ferreteria_fields input[type="text"]:last-of-type,
+#pinturas_fields input[type="text"]:last-of-type {
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    #accesorios_fields input[type="text"],
+    #mini_ferreteria_fields input[type="text"],
+    #pinturas_fields input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+    }
+}

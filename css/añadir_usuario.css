@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-dashboard {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.admin-dashboard form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-dashboard label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.admin-dashboard input[type="text"],
+.admin-dashboard input[type="email"],
+.admin-dashboard input[type="password"],
+.admin-dashboard select {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.admin-dashboard button {
+    padding: 0.75rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-dashboard button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.admin-dashboard p {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.admin-dashboard .error {
+    color: #d9534f;
+}
+
+.admin-dashboard .success {
+    color: #5cb85c;
+}
+
+@media (max-width: 600px) {
+    .admin-dashboard {
+        padding: 1rem;
+    }
+
+    .admin-dashboard h1 {
+        font-size: 1.5rem;
+    }
+
+    .admin-dashboard button {
+        font-size: 0.9rem; 
+    }
+}

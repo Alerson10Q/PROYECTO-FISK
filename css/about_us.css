@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow: 5px;
+}
+h2{
+    text-align: left;
+    text-shadow: 5px;
+}

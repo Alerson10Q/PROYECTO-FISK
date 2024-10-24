@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr; /* Ajusta el tamaño de las columnas */
+    gap: 1px;
+    width: 70%; /* Ajusta el ancho total de la tabla */
+    margin: 0 auto;
+    background-color: #ddd;
+}
+
+.grid-header, .grid-item {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.grid-header {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+.grid-item:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.grid-container .grid-item {
+    word-wrap: break-word;
+    overflow: hidden;
+}
