@@ -1,0 +1,26 @@
+{
+    "name": "pintureriaarcoiris",
+    "description": "Descripción de tu aplicación",
+    "scripts": {
+      "postdeploy": "php artisan migrate --force"
+    },
+    "env": {
+      "APP_ENV": "production",
+      "APP_DEBUG": {
+        "required": true
+      },
+      "DATABASE_URL": {
+        "description": "URL de conexión a la base de datos",
+        "value": "http://localhost/phpmyadmin/index.php?route=/database/structure&db=pintureriaarcoiris_db"
+      }
+    },
+    "addons": [
+      "heroku-postgresql"
+    ],
+    "buildpacks": [
+      {
+        "url": "heroku/php"
+      }
+    ]
+  }
+  
