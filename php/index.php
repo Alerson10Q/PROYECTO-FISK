@@ -12,6 +12,15 @@ session_start();
     <link rel="stylesheet" href="../css/producto.css">
     
 </head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QX4F97GZ55"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QX4F97GZ55');
+</script>
 <?php include 'header.php'; ?>
 <body>
 
