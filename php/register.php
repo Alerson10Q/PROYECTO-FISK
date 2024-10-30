@@ -10,6 +10,15 @@ include 'db_connection.php';
     <title>Registro</title>
     <link rel="stylesheet" href="../css/register.css">
 </head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QX4F97GZ55"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QX4F97GZ55');
+</script>
 <body>
     <h1>Registro de Usuario</h1>
     
