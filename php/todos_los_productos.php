@@ -20,6 +20,15 @@ $result = $conn->query($sql);
     <title>Todos los Productos</title>
     <link rel="stylesheet" href="../css/todoslosproductos.css">
 </head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QX4F97GZ55"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QX4F97GZ55');
+</script>
 <body>
     <div class="container">
         <h1>Todos los Productos</h1>
