@@ -3,6 +3,7 @@ session_start();
 include 'header.php';
 include 'db_connection.php';
 
+// Verificar si el usuario tiene permisos de administrador
 if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'Administrador') {
     header('Location: login.php');
     exit;
@@ -10,19 +11,23 @@ if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'Administrador'
 
 $message = '';
 
+// Procesar el formulario al enviar
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nombre = trim($_POST['nombre']);
     $email = trim($_POST['email']);
     $password = $_POST['password'];
     $rol = $_POST['rol'];
 
+    // Validar los datos ingresados
     if (!empty($nombre) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($password)) {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO Usuarios (nombre, email, password, rol) VALUES (?, ?, ?, ?)";
+        // Consulta para insertar un nuevo usuario
+        $sql = "INSERT INTO usuarios (nombre_usuario, correo, contraseña, clasificacion) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         
         if ($stmt) {
+            // Vincular parámetros y ejecutar la consulta
             $stmt->bind_param("ssss", $nombre, $email, $password_hash, $rol);
 
             if ($stmt->execute()) {
@@ -62,10 +67,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required>
 
-            <label for="rol">Rol:</label>
+            <label for="rol">Clasificación:</label>
             <select id="rol" name="rol" required>
+                <option value="Cliente">Cliente</option>
                 <option value="Administrador">Administrador</option>
-                <option value="Usuario">Usuario</option>
             </select>
 
             <button type="submit">Añadir Usuario</button>
