@@ -3,11 +3,6 @@ session_start();
 include 'header.php';
 include 'db_connection.php';
 
-if (!isset($_SESSION['user_role'])) {
-    header('Location: login.php');
-    exit;
-}
-
 $id_producto = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 if ($id_producto > 0) {
