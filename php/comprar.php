@@ -2,8 +2,32 @@
 session_start();
 include 'db_connection.php';
 
+function verificarCedula($cedula) {
+    $factores = [2, 9, 8, 7, 6, 3, 4];
+    
+    if (strlen($cedula) != 7 || !ctype_digit($cedula)) {
+        return false;
+    }
+    
+    $suma = 0;
+    for ($i = 0; $i < 7; $i++) {
+        $suma += $cedula[$i] * $factores[$i];
+    }
+    
+    $proximoMultiplo10 = ceil($suma / 10) * 10;
+    $digitoVerificador = $proximoMultiplo10 - $suma;
+
+    return $digitoVerificador;
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) && $_POST['action'] == 'checkout') {
     $user_id = $_SESSION['id_usuario'];
+    $cedula = isset($_POST['cedula']) ? $_POST['cedula'] : '';
+
+    if (strlen($cedula) != 8 || substr($cedula, -1) != verificarCedula(substr($cedula, 0, 7))) {
+        echo 'Cédula de identidad incorrecta.';
+        exit;
+    }
 
     $direccion_de_envio = isset($_POST['direccion_de_envio']) ? $_POST['direccion_de_envio'] : '';
     $forma_de_pago = isset($_POST['forma_de_pago']) ? $_POST['forma_de_pago'] : '';
