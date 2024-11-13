@@ -3,11 +3,6 @@ session_start();
 include 'header.php';
 include 'db_connection.php';
 
-if (!isset($_SESSION['user_role'])) {
-    header('Location: login.php');
-    exit;
-}
-
 $sql = "SELECT * FROM Productos";
 $result = $conn->query($sql);
 ?>
