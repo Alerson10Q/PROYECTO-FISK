@@ -37,7 +37,7 @@ $result = $conn->query($sql);
                     <h2><?php echo htmlspecialchars($producto['nombre']); ?></h2>
                     <p>Precio: <?php echo htmlspecialchars($producto['precio']); ?></p>
                     <p>Stock: <?php echo htmlspecialchars($producto['stock_cantidad']); ?></p>
-                    <a href="producto_detalle.php?id=<?php echo htmlspecialchars($producto['id_producto']); ?>">Ver Detalle</a>
+                    <a href="producto.php?id=<?php echo htmlspecialchars($producto['id_producto']); ?>">Ver Detalle</a>
                 </div>
             <?php endwhile; ?>
         </div>
