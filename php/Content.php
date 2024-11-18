@@ -10,7 +10,7 @@
 
 <div class="container">
     <div class="image-container">
-        <img src="https://scontent.fmvd3-1.fna.fbcdn.net/v/t39.30808-6/272991292_4907324309303760_8892391439800261863_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=j3ioS4YUuEcQ7kNvgFQFsc1&_nc_ht=scontent.fmvd3-1.fna&oh=00_AYAsHhgOsmeQZIqBvhHgMu6RwT6935GSY1pQ2PryU280XA&oe=66FCC753" alt="Imagen Publicitaria">
+        <img src="https://tse3.mm.bing.net/th?id=OIG3.8rq2SXW.elgnYKqNCpjk&pid=ImgGn" alt="Imagen Publicitaria">
     </div>
     <div class="company-info">
         <h2>Arcoiris</h2>
