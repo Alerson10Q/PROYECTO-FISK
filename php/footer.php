@@ -4,7 +4,7 @@
         <p>
             <a href="index.php" style="color: #fff; text-decoration: none; margin: 0 10px;">Inicio</a> |
             <a href="content.php" style="color: #fff; text-decoration: none; margin: 0 10px;">Content</a> |
-            <a href="terminos.php" style="color: #fff; text-decoration: none; margin: 0 10px;">Términos y Condiciones</a>
+            <a href="https://policies.google.com/terms?hl=es" style="color: #fff; text-decoration: none; margin: 0 10px;">Términos y Condiciones</a>
         </p>
         <p>
             <a href="https://www.facebook.com/PintureriaArcoiris" style="color: #fff; text-decoration: none; margin: 0 10px;" target="_blank">Facebook</a> |
